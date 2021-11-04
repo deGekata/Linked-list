@@ -1,4 +1,4 @@
-#include "tools.hpp"
+#include "../inc/tools.hpp"
 
 void* safe_calloc(size_t _Count, size_t _Size) {
     void* ret_ptr = calloc(_Count, _Size);

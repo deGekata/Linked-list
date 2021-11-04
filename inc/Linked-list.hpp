@@ -2,12 +2,13 @@
 #define INC_LINKED_LIST
 
 #include "Linker.hpp"
-
+#include "stdio.h"
 typedef int List_type;
 
 
 
 struct Linked_list {
+    size_t size, capacity;
     Linker* next;
     Linker* free_data;
     List_type* data;
@@ -30,7 +31,5 @@ List_type pop_front_list(Linked_list* list);
 List_type back_list(Linked_list* list);
 
 List_type front_list(Linked_list* list);
-
-
 
 #endif
