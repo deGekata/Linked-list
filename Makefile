@@ -8,7 +8,7 @@ all: clean List
 
 
 
-List: Linked-list.o Linker.o main.o tools.o
+List: Linked-list.o main.o tools.o
 	$(CC) $(BuildF)Linked-list.o $(BuildF)Linker.o $(BuildF)main.o $(BuildF)tools.o
 
 

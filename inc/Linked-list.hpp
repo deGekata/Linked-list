@@ -1,35 +1,35 @@
 #ifndef INC_LINKED_LIST
 #define INC_LINKED_LIST
 
-#include "Linker.hpp"
 #include "stdio.h"
 typedef int List_type;
 
+struct ListNode {
+    List_type elem;
+    int next, prev;
+};
 
-
-struct Linked_list {
+struct LinkedList {
     size_t size, capacity;
-    Linker* next;
-    Linker* free_data;
-    List_type* data;
+    ListNode* data;
 };
 
 
-void ctor_list(Linked_list* list);
+void ctor_list(LinkedList* list);
 
-void dtor_list(Linked_list* list);
+void dtor_list(LinkedList* list);
 
 
-void push_back_list(Linked_list* list, List_type val);
+void push_back_list(LinkedList* list, LinkedList val);
 
-void push_front_list(Linked_list* list, List_type val);
+void push_back_list(LinkedList* list, LinkedList val);
 
-List_type pop_back_list(Linked_list* list);
+List_type pop_back_list(LinkedList* list);
 
-List_type pop_front_list(Linked_list* list);
+List_type pop_front_list(LinkedList* list);
 
-List_type back_list(Linked_list* list);
+List_type back_list(LinkedList* list);
 
-List_type front_list(Linked_list* list);
+List_type front_list(LinkedList* list);
 
 #endif

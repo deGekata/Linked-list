@@ -16,6 +16,8 @@ void ctor_linker(Linker* linker);
 
 void dtor_linker(Linker* linker);
 
+void push_front_linker(Linker* linker);
+
 int pop_front_linker(Linker* linker);
 
 
