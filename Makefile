@@ -9,7 +9,7 @@ all: clean List
 
 
 List: Linked-list.o main.o tools.o
-	$(CC) $(BuildF)Linked-list.o $(BuildF)Linker.o $(BuildF)main.o $(BuildF)tools.o
+	$(CC) $(BuildF)Linked-list.o $(BuildF)main.o $(BuildF)tools.o
 
 
 tools.o: 
@@ -18,9 +18,6 @@ tools.o:
 
 Linked-list.o: 
 	$(CC) -c $(CFLAGS) src/Linked-list.cpp -o  $(BuildF)Linked-list.o
-
-Linker.o: 
-	$(CC) -c $(CFLAGS) src/Linker.cpp -o  $(BuildF)Linker.o
 
 main.o:
 	$(CC) -c $(CFLAGS) src/main.cpp -o  $(BuildF)main.o

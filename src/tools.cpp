@@ -12,3 +12,10 @@ void safe_realloc(void** _Block, size_t _Size) {
     *_Block = ret_ptr;
 }
 
+void safe_free(void* ptr) {
+    if(ptr != NULL) {
+        free(ptr);
+    }
+    return;
+}
+
