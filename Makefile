@@ -2,7 +2,7 @@
 CC=g++
 
 #Это еще один комментарий. Он поясняет, что в переменной CFLAGS лежат флаги, которые передаются компилятору
-CFLAGS = -std=c++17 -Wall -Wextra -Weffc++ -Wc++0x-compat -Wc++11-compat -Wc++14-compat 
+CFLAGS = -g -std=c++17 -Wall -Wextra -Weffc++ -Wc++0x-compat -Wc++11-compat -Wc++14-compat 
 CFLAGS += -Waggressive-loop-optimizations -Walloc-zero -Walloca -Walloca-larger-than=8192 -Warray-bounds 
 CFLAGS += -Wcast-align -Wcast-qual -Wchar-subscripts -Wconditionally-supported -Wconversion -Wctor-dtor-privacy 
 CFLAGS += -Wdangling-else -Wduplicated-branches -Wempty-body -Wfloat-equal -Wformat-nonliteral -Wformat-security 
@@ -29,7 +29,7 @@ all: clean List
 
 
 List: Linked-list.o main.o tools.o
-	$(CC) $(BuildF)Linked-list.o $(BuildF)main.o $(BuildF)tools.o
+	$(CC) $(BuildF)Linked-list.o $(BuildF)main.o $(BuildF)tools.o -o list_main.out
 
 
 tools.o: 

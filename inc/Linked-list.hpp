@@ -6,7 +6,10 @@
 #include <stdlib.h>
 #include "tools.hpp"
 
-size_t const base_list_size = 8; 
+
+
+size_t const Base_list_size = 8; 
+size_t const Base_realloc_coeff = 2;
 
 typedef int List_type;
 
@@ -27,24 +30,23 @@ void ctor_list(LinkedList* list);
 
 void dtor_list(LinkedList* list);
 
-void push_back_list(LinkedList* list, List_type val);
+void insert_list(LinkedList* list, int ind, List_type val);
 
-void push_front_list(LinkedList* list, List_type val);
-
-List_type pop_back_list(LinkedList* list);
-
-List_type pop_front_list(LinkedList* list);
-
-List_type back_list(LinkedList* list);
-
-List_type front_list(LinkedList* list);
+void erase_list(LinkedList* list, int ind);
 
 void sort_list(LinkedList* list);
 
 // void get_item_by_ind(LinkedList* list, int ind);
 List_type get_item_by_ind_dont_use_it_super_duper_extra_slow_slow_slow_function_when_list_is_not_sorted_ur_mom_is_gay_try_use_is_only_after_sorting_list_and_many_times_to_get_maximum_benefit_from_this_func(LinkedList* list, int ind);
 
-void realloc_list(LinkedList* list, size_t n_capacity);
+void realloc_list(LinkedList* list);
 
+void printlist(LinkedList* list);
+
+void add_free_elem(LinkedList* list, int ind);
+
+int pop_free_elem(LinkedList* list);
+
+int listCreateGraph(LinkedList* list);
 
 #endif
